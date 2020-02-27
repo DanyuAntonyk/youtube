@@ -4,6 +4,12 @@
   <meta charset="utf-8">
   <title>youtube</title>
  <style>
+ .photo {
+  position:absolute;
+  width: 100%;
+  height:100%;
+   background: url(depositphotos_13280842-stock-photo-tv-screen-white (1).jpg) center ;
+}
 #video12 {
   position:absolute;
   width: 100%;
@@ -35,9 +41,10 @@
   opacity: .2;
 }
 </style>
+<div class="photo">
 
 <div align="center" id="video12">
-  <iframe src="http://www.youtube.com/embed/xFa2_PVMeDQ?rel=0" allowfullscreen="" frameborder="0"></iframe>
+  <iframe width="854" height="480" src="http://www.youtube.com/embed/xFa2_PVMeDQ?rel=0" allowfullscreen="" frameborder="0"></iframe>
   <div>
   <img src="http://img.youtube.com/vi/hSrOpTYKNMw/1.jpg" tabindex="2"data-start="32" data-end="60"/>
     <img src="http://img.youtube.com/vi/hSrOpTYKNMw/1.jpg" tabindex="2"/>
@@ -46,8 +53,7 @@
 </div>
 
 <script>
-var IMG = document.querySelectorAll('#video12 img'),
-    IFRAME = document.querySelector('#video12 iframe');
+var IMG = document.querySelectorAll('#video12 img');
 for (var i = 0; i < IMG.length; i++) {
   IMG[i].onclick = function() {
     var idIMG = this.src.replace(/http...img.youtube.com.vi.([\s\S]*?).1.jpg/g, '$1');
